@@ -91,6 +91,12 @@ export const sidebar: loopSidebar = {
       link: "/bc/ecology",
     },
   ],
+  "human-geography": [
+    {
+      text: "我的家乡",
+      link: "/human-geography/",
+    },
+  ],
 };
 
 function getValueByPath(obj: loopSidebar, path: string) {
@@ -126,4 +132,5 @@ export const sidebarConfig: DefaultTheme.Sidebar = {
   "/develop/miniprogram/": getPageSidebar("develop.miniprogram"),
   "/develop/tools/": getPageSidebar("develop.tools"),
   "/bc/": getPageSidebar("bc"),
+  "/human-geography/": getPageSidebar("human-geography"),
 };
