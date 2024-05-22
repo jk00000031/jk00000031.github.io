@@ -1,0 +1,14 @@
+@import "./base.css";
+
+.VPHome .container {
+  max-width: calc(var(--vp-layout-max-width) - 64px);
+  padding: 0;
+}
+
+.VPDoc.has-aside .container > .content {
+  padding: 0 0 64px;
+}
+
+.VPDoc.has-aside .container .content-container {
+  max-width: 100%;
+}
