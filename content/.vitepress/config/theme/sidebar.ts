@@ -122,7 +122,6 @@ function getValueByPath(obj: loopSidebar, path: string) {
 
 export const getPageSidebar = (prefix: string): DefaultTheme.SidebarItem[] => {
   const result = getValueByPath(sidebar, prefix);
-  console.log(result);
   return result ? (result as DefaultTheme.SidebarItem[]) : [];
 };
 

@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: SomeRecords
-  text: 不是专业的博客<br />想到什么记录什么
-  tagline: 不用担心有关创意会泄露，因为我希望自己的想法能够在世界出现，哪怕实现的那个人不是我。
+  name: Interval 3
+  text: 与命运相关且陪伴至今的数字。
+  tagline: 为什么不取名为 Math 3？<br />因为间隔也是 play 的一环。
   image:
     src: /home.png
     alt: VitePress
