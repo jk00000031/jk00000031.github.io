@@ -18,7 +18,7 @@ export const sidebar: loopSidebar = {
           },
           {
             text: "基于用户画像的数据推荐算法",
-            link: "/develop/back-end/python/push-algorithm"
+            link: "/develop/back-end/python/push_algorithm"
           }
         ],
       }
