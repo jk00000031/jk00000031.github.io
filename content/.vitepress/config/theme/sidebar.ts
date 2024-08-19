@@ -10,14 +10,18 @@ export const sidebar: loopSidebar = {
         link: "/develop/back-end/",
       },
       {
-        text: "Python Web",
+        text: "Python",
         items: [
           {
             text: "Django 在 Window 系统上初始化的步骤",
             link: "/develop/back-end/python/at-venv-init",
           },
+          {
+            text: "基于用户画像的数据推荐算法",
+            link: "/develop/back-end/python/push-algorithm"
+          }
         ],
-      },
+      }
     ],
     "front-end": [
       {
