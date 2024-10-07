@@ -1,0 +1,103 @@
+html:has(.landing) body {
+  --vp-landing-background: #09090b;
+  --vp-nav-screen-bg-color: var(--vp-landing-background);
+
+  background-color: var(--vp-landing-background);
+}
+
+.VPContent {
+  overflow: hidden;
+}
+
+.landing {
+  .VPNavBarAppearance,
+  .VPNavScreenAppearance {
+    display: none;
+  }
+
+  .VPNavBar:not(.has-sidebar):not(.home.top) {
+    background-color: var(--vp-landing-background);
+  }
+
+  .VPFooter {
+    background-color: var(--vp-landing-background);
+
+    .message,
+    .copyright {
+      font-size: 12px;
+    }
+  }
+}
+
+.dark {
+  .VPNavBarMenuLink.VPNavBarMenuLink:hover {
+    color: var(--vp-c-brand-lighter);
+  }
+}
+
+.LandingPage {
+  position: relative;
+  color: var(--vp-c-brand-lighter);
+
+  .LPJumbotron {
+    padding: 81px 14px;
+    text-align: center;
+    color: white;
+
+    h1 {
+      font-size: 32px;
+      line-height: 1.5;
+      color: var(--vp-c-brand-lighter);
+
+      span {
+        font-size: 44px;
+      }
+    }
+  }
+
+  .mandala {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    z-index: -1;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background-image: radial-gradient(rgba(0, 0, 255, 0.244), rgba(10, 1, 15, 0.311) 60%, var(--vp-landing-background) 10%);
+  }
+}
+
+.LPControls {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
+  .LPControl {
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: var(--vp-c-bg);
+    color: rgb(201, 201, 201);
+
+    &.primary {
+      background-color: var(--vp-c-brand-lighter);
+      color: black;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .LandingPage {
+    .LPJumbotron {
+      padding: 10rem 0;
+
+      h1 {
+        font-size: 44px;
+
+        span {
+          font-size: 64px;
+        }
+      }
+    }
+  }
+}
