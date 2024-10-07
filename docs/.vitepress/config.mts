@@ -83,7 +83,7 @@ export default defineConfig({
               text: '微前端',
               items: [
                 {
-                  text: '阿里飞冰微服务',
+                  text: '阿里飞冰微前端',
                   link: '/developer/tools/ali-ice-microservice',
                 },
               ],
