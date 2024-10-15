@@ -1,12 +1,14 @@
 html:has(.landing) body {
   --vp-landing-background: #09090b;
+  --vp-landing-line-color: #71717a;
   --vp-nav-screen-bg-color: var(--vp-landing-background);
 
   background-color: var(--vp-landing-background);
+  color: var(--vp-c-white);
 }
 
-.VPContent {
-  overflow: hidden;
+.VPHome {
+  margin-bottom: 0 !important;
 }
 
 .landing {
@@ -36,68 +38,176 @@ html:has(.landing) body {
 }
 
 .LandingPage {
-  position: relative;
-  color: var(--vp-c-brand-lighter);
-
-  .LPJumbotron {
-    padding: 81px 14px;
-    text-align: center;
-    color: white;
-
-    h1 {
-      font-size: 32px;
-      line-height: 1.5;
-      color: var(--vp-c-brand-lighter);
-
-      span {
-        font-size: 44px;
-      }
-    }
+  .container {
+    padding: 0 24px;
   }
 
-  .mandala {
-    position: absolute;
-    left: 50%;
-    top: 75%;
-    z-index: -1;
-    transform: translateX(-50%);
-    border-radius: 50%;
-    background-image: radial-gradient(rgba(0, 0, 255, 0.244), rgba(10, 1, 15, 0.311) 60%, var(--vp-landing-background) 10%);
+  .line {
+    display: none;
   }
 }
 
-.LPControls {
-  margin-top: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
+.lead {
+  padding: 32px 0;
 
-  .LPControl {
-    padding: 8px 16px;
-    border-radius: 4px;
-    background-color: var(--vp-c-bg);
-    color: rgb(201, 201, 201);
+  .tile {
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
 
-    &.primary {
-      background-color: var(--vp-c-brand-lighter);
+  p {
+    font-size: 14px;
+    color: #d4d4d8;
+  }
+}
+
+.container.jumbotron-container {
+  padding: 44px 32px;
+  background-size: 20px 20px;
+  background-image: linear-gradient(to right, #ffffff20 1px, transparent 1px), linear-gradient(to bottom, #ffffff20 1px, transparent 1px);
+}
+
+.jumbotron {
+  h1 {
+    font-size: 44px;
+    line-height: 66px;
+  }
+
+  .lead {
+    color: #e4e4e7;
+    /* margin: 32px 0 24px; */
+  }
+
+  .control-group {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    column-gap: 16px;
+
+    .control {
+      background-color: #a1a1aa;
+      padding: 6px 14px;
       color: black;
+      border-radius: 4px;
+
+      &.primary {
+        background-color: var(--vp-c-brand);
+        color: var(--vp-c-white);
+      }
     }
   }
 }
 
-@media (min-width: 768px) {
-  .LandingPage {
-    .LPJumbotron {
-      padding: 10rem 0;
+.ToolList {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+  padding-bottom: 32px;
 
-      h1 {
-        font-size: 44px;
+  .toolbox {
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    padding: 14px;
+    border: 1px solid #52525b;
+    background-color: #18181b;
 
-        span {
-          font-size: 64px;
-        }
+    .tile {
+      font-size: 22px;
+    }
+
+    .descript {
+      flex: 1;
+      padding: 6px 0;
+      font-size: 14px;
+      color: #a1a1aa;
+    }
+
+    .visit {
+      font-size: 14px;
+      border-bottom: 1px solid var(--vp-c-white);
+      color: #d4d4d8;
+
+      &:hover {
+        color: var(--vp-c-white);
       }
     }
+  }
+}
+
+@media (min-width: 766px) {
+  .LandingPage {
+    .container {
+      padding: 0 32px;
+    }
+  }
+
+  .container.jumbotron-container {
+    padding: 76px 32px;
+
+    .jumbotron {
+      h1 {
+        font-size: 64px;
+        line-height: 86px;
+      }
+
+      .lead {
+        padding: 32px 0 24px;
+      }
+    }
+  }
+
+  .ToolList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1440px) {
+  .VPNav {
+    border-bottom: 1px solid var(--vp-landing-line-color);
+
+    .container {
+      border-style: solid;
+      border-width: 0 1px;
+      border-color: var(--vp-landing-line-color);
+      padding: 0 32px;
+    }
+  }
+
+  .LandingPage {
+    .container {
+      max-width: calc(var(--vp-layout-max-width) - 64px);
+      margin: 0 auto;
+      border-style: solid;
+      border-width: 0 1px;
+      border-color: var(--vp-landing-line-color);
+      padding: 0 32px;
+    }
+
+    .line {
+      display: block;
+      border-color: var(--vp-landing-line-color);
+      margin: 0;
+    }
+  }
+
+  .container.jumbotron-container {
+    padding: 112px 32px;
+
+    .jumbotron {
+      h1 {
+        font-size: 64px;
+        line-height: 86px;
+      }
+
+      .lead {
+        padding: 32px 0 24px;
+      }
+    }
+  }
+
+  .ToolList {
+    grid-template-columns: repeat(5, 1fr);
   }
 }

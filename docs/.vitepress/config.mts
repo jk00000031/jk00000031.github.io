@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'Learn Once',
+  title: 'LearnOnce',
   description: '虽然站内有各种想到的创意点，但，我是个拖延症患者。',
   lang: 'zh-CN',
   head: [['link', { rel: 'icon', href: '/logo.svg' }]],
@@ -15,6 +15,7 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/logo.svg',
+    siteTitle: false,
     outline: {
       level: [2, 3],
       label: '文章目录',
