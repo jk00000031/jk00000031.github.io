@@ -1,5 +1,5 @@
 ---
-pageClass: landing dark
+pageClass: landing
 
 layout: home
 aside: false

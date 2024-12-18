@@ -1,11 +1,17 @@
 import { defineConfig } from 'vitepress';
 
+import navRouter from './router/nav';
+import { developerSidebarRoutes } from './router/sidebar';
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: 'LearnOnce',
+  title: '没有计划',
   description: '虽然站内有各种想到的创意点，但，我是个拖延症患者。',
   lang: 'zh-CN',
-  head: [['link', { rel: 'icon', href: '/logo.svg' }]],
+  head: [
+    ['link', { rel: 'icon', href: '/logo.svg' }],
+    // ['link', { rel: 'stylesheet', href: './theme/var.css' }],
+  ],
   locales: {
     root: {
       label: '简体中文',
@@ -15,7 +21,7 @@ export default defineConfig({
 
   themeConfig: {
     logo: '/logo.svg',
-    siteTitle: false,
+    siteTitle: 'Sansplan',
     outline: {
       level: [2, 3],
       label: '文章目录',
@@ -48,77 +54,10 @@ export default defineConfig({
       },
     },
 
-    nav: [
-      {
-        text: 'Web 开发者',
-        link: '/developer/',
-      },
-    ],
+    nav: navRouter,
 
     sidebar: {
-      '/developer/': [
-        {
-          text: '吐槽回顾',
-          link: '/developer/',
-        },
-        {
-          text: '前端',
-          items: [
-            {
-              text: 'Canvas 实现图片元素的缩放、拖拽功能',
-              link: '/developer/front-end/javascript/canvas-drag',
-            },
-            {
-              text: 'JS 获取某年有多少周及每周日期',
-              link: '/developer/front-end/javascript/year-weeks-and-weekdate',
-            },
-            {
-              text: '手写命令生成 Vue 组件套件',
-              link: '/developer/front-end/vue/generate',
-            },
-            {
-              text: 'VueCropper 踩坑',
-              link: '/developer/front-end/vue/vue-cropper',
-            },
-            {
-              text: '微前端',
-              items: [
-                {
-                  text: '阿里飞冰微前端',
-                  link: '/developer/tools/ali-ice-microservice',
-                },
-              ],
-            },
-          ],
-        },
-        {
-          text: '小程序',
-          items: [
-            {
-              text: '微信小程序 - 自定义 DatetimePicker 组件',
-              link: '/developer/miniprogram/wx/customComponent-datetimePicker',
-            },
-          ],
-        },
-        {
-          text: '服务端',
-          items: [
-            {
-              text: 'Python',
-              items: [
-                {
-                  text: 'Django 在 Window 系统上初始化的步骤',
-                  link: '/developer/back-end/python/at-venv-init',
-                },
-                {
-                  text: '基于用户画像的数据推荐算法',
-                  link: '/developer/back-end/python/push_algorithm',
-                },
-              ],
-            },
-          ],
-        },
-      ],
+      ...developerSidebarRoutes,
     },
   },
   vite: {
