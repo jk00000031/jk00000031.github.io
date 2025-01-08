@@ -19,11 +19,15 @@ export default [
     ],
   },
   {
-    text: '开发进阶工具',
+    text: '工具集',
     items: [
       {
         text: '微前端',
         link: '/developer/tools/',
+      },
+      {
+        text: 'Git Version',
+        link: '/developer/git/',
       },
     ],
   },

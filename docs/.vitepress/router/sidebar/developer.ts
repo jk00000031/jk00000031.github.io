@@ -52,4 +52,11 @@ export default {
       link: '/developer/tools/ali-ice-microservice',
     },
   ],
+
+  '/developer/git': [
+    {
+      text: 'Git 钩子错误，导致新文件丢失？',
+      link: '/developer/git/stash',
+    },
+  ],
 } as DefaultTheme.Sidebar;
