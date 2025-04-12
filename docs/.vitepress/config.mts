@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress';
 
 import navRouter from './router/nav';
-import { developerSidebarRoutes } from './router/sidebar';
+import { developerSidebarRoutes, ideaSidebarRoutes } from './router/sidebar';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -58,6 +58,7 @@ export default defineConfig({
 
     sidebar: {
       ...developerSidebarRoutes,
+      ...ideaSidebarRoutes,
     },
   },
   vite: {

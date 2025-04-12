@@ -31,4 +31,8 @@ export default [
       },
     ],
   },
+  {
+    text: '创意天空',
+    link: '/idea/',
+  },
 ] as DefaultTheme.NavItem[];
